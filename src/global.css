@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Commuters-Sans";
+  scroll-behavior: smooth;
+}
+
+.layout {
+  max-width: 1420px;
+  width: 100%;
+  padding: 0 20px;
+  margin: auto;
+}
+
+.smooth {
+  transition: all 0.3s ease;
+}
+
+.bg {
+  background: url(./assets/images/bg.svg) center no-repeat;
+  background-size: cover;
+}
+
+.notFound-bg {
+  background: url("./assets/images/404-bg.png") no-repeat center/cover;
+}
+
+.zodiac {
+  animation: zodiacRotate 10s infinite linear;
+}
+
+@keyframes zodiacRotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* hover effects */
+/* glass */
+.glass-hover-effect {
+  position: relative;
+  transition: transform 500ms ease;
+  overflow: hidden;
+}
+
+.glass-hover-effect::before {
+  content: "";
+  width: 60%;
+  height: 100%;
+  top: 0%;
+  left: -125%;
+  transform: skew(45deg);
+  position: absolute;
+  background: #fff;
+  opacity: 0.3;
+  transition: left 500ms ease;
+}
+
+.glass-hover-effect:hover::before {
+  left: 150%;
+}
