@@ -55,7 +55,7 @@ const Contact = () => {
                   <div>
                     <FontAwesomeIcon icon={faGooglePay} className="w-10 h-10" />
                   </div>
-                  <div className="h-10 font-branch tracking-wider text-lg font-bold">geethika.0387@okhdfcbank</div>
+                  <div className="h-8 font-branch tracking-wider text-lg font-bold">9840226143</div>
                 </div>
               </div>
             </div>
