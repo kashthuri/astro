@@ -5,23 +5,23 @@ import Image from "../../../components/Image";
 const ServicesCard = ({ reverse, cardClass, ...data }) => {
   return (
     <div
-      className={`flex items-center justify-between gap-20 py-10 even:flex-row-reverse ${reverse && "flex-row-reverse"
+      className={`flex flex-col items-center justify-between gap-20 px-0 py-10 md:flex-row ${reverse && "flex-row-reverse"
         } ${cardClass}`}
     >
-      <div className="w-2/4  even:justify-end flex">
+      <div className="w-full md:even:justify-end justify-center flex md:w-2/4">
         <Image
           src={require(`../../../assets/images/${data.image}`)}
           alt={""}
-          imgClass="min-w-[300px] h-[300px] rounded-full"
+          imgClass="w-[200px] h-[200px] rounded-full sm:min-w-[300px] sm:h-[300px]"
         />
       </div>
-      <div className="text-white">
-        <h1 className="font-SulphurPoint w-1/2 border-b pb-2 text-2xl tracking-wider">
+      <div className="text-white xl:pl-10 lg:pl-5">
+        <h1 className="font-SulphurPoint w-full md:border-b pb-2 text-lg tracking-wider md:w-1/2 md:text-xl">
           {data.title}
         </h1>
-        <div className="py-10">
+        <div className="md:py-10 py-5">
           {data.content.map((content) => {
-            return <p className="py-2.5 leading-7">{content.text}</p>;
+            return <p className="py-2.5 leading-7 text-xs">{content.text}</p>;
           })}
         </div>
         <Button label={"Read More"} btnClass="rounded-full h-[50px] w-1/5" />

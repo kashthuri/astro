@@ -9,7 +9,7 @@
 .layout {
   max-width: 1420px;
   width: 100%;
-  padding: 0 20px;
+  /* padding: 0 20px; */
   margin: auto;
 }
 
@@ -59,4 +59,18 @@
 
 .glass-hover-effect:hover::before {
   left: 150%;
+}
+#our-services > div > div:nth-child(2n) {
+  flex-direction: row-reverse;
+}
+@media screen and (max-width: 768px) {
+  #our-services > div > div:nth-child(2n) {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .layout {
+    /* padding: 0 10px; */
+  }
 }

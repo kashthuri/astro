@@ -9,17 +9,17 @@ import CopyRights from "../../components/CopyRights";
 const Home = () => {
   return (
     <div>
-      <div className="bg max-h-[100vh] overflow-hidden overflow-y-scroll p-5 text-dark1">
+      <div className="bg max-h-[100vh] overflow-hidden overflow-y-scroll min-[992px]:p-5 p-3 text-dark1">
         <div
           id="home"
           className="layout relative top-[40px] flex h-[calc(100vh-30px)] items-center justify-between"
         >
-          <div className="flex flex-1 flex-col justify-center">
-            <h1 className="font-against text-3xl text-light">Welcome to</h1>
-            <h1 className="pt-4 font-against text-4xl font-bold text-dark">
+          <div className="flex flex-1 flex-col justify-center max-[992px]:items-center max-[992px]:text-center">
+            <h1 className="font-against text-lg text-light min-[992px]:text-3xl sm:text-xl">Welcome to</h1>
+            <h1 className="pt-4 font-against min-[992px]:text-4xl text-2xl font-bold text-dark sm:text-3xl">
               Kasthuri Astrology Center
             </h1>
-            <div className="py-10 text-light">
+            <div className="py-10 text-light text-sm sm:text-base">
               <p className="pt-0">Explore Yourself.</p>
               <p className="pt-0">Get your personal natal chart now</p>
             </div>
@@ -31,7 +31,7 @@ const Home = () => {
               <span className="smooth pl-1.5 group-hover:translate-x-3">→</span>
             </a>
           </div>
-          <div className="relative flex h-[100%] w-[100%] flex-1 flex-col items-center justify-center text-light">
+          <div className="relative h-[100%] w-[100%] flex-1 flex-col items-center justify-center text-light hidden min-[992px]:flex">
             <img
               src={zodiacSigns}
               alt=""
@@ -41,8 +41,8 @@ const Home = () => {
         </div>
         <div className="h-full py-10">
           <div className="layout">
-            <h1 className="text-3xl text-light">Zodiac Signs</h1>
-            <div className="grid grid-cols-4 gap-10 py-10">
+            <h1 className="text-xl text-light md:text-2xl">Zodiac Signs</h1>
+            <div className="grid grid-cols-1 gap-10 py-10 min-[499px]:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
               {zodiacSign?.map((sign) => (
                 <ZodiacSigns image={sign?.image} name={sign?.name} />
               ))}
@@ -52,7 +52,7 @@ const Home = () => {
         <div id="our-services" className="layout h-full w-full">
           <Services />
         </div>
-        <div id="contact-us" className="layout h-[75vh] pt-[20vh]">
+        <div id="contact-us" className="layout pt-[20vh]">
           <Contact />
         </div>
         <CopyRights />
